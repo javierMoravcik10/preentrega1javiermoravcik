@@ -1,40 +1,41 @@
 import React from "react";
+import ToggleButton from "../ToggleButton/ToggleButton";
 import CartWidget from "./CartWidget";
 import LogoNav from "./LogoNav";
 import "./NavBarStyle.css";
 
-
+import { Link } from "react-router-dom";
 
 function NavBar(){
     return (
         <div className="headerMenu">
             <div className="logoNav">
+                <Link to="/">
              <LogoNav imgurl="/imgs/ultguata.jpg" />
+                </Link>
         </div>
-        <nav>
-            <ul className="btnMenu">
+        <nav className="nav-menu">
+            <ul className="btnMenu nav-list">            
                 <li>
-                    <input type="search" value="Buscar" class="buscador"/>
-                  </li>             
-                <li>
-                    <a href="/">Inicio</a>
+                    <Link to="/category/Pantalones">Pantalones</Link>
                 </li>
                 <li>
-                    <a href="/">Hombre</a>
+                    <Link to="/category/Remeras">Remeras</Link>
                 </li>
                 <li>
-                    <a href="/">Mujer</a>
+                    <Link to="/category/Buzos">Buzos</Link>
                 </li>
                 <li>
-                    <a href="/">Nosotros</a>
+                    <Link to="/detail">Detalles</Link>
                 </li>
                 <li>
                     <a href="/"><CartWidget counter="0"/></a>
                 </li>
+            <ToggleButton icon="💰"/>
             </ul>
         </nav>
         </div>
     ) 
 }
 
-export default NavBar
+export default NavBar;

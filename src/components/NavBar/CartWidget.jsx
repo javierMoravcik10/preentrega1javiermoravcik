@@ -4,12 +4,8 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import "./NavBarStyle.css";
 
 
-import * as iconList from "@fortawesome/free-solid-svg-icons";
 
 function CartWidget({counter}){
-
-  console.log(iconList);
-
 
     return (
         <div className='cart1'>
