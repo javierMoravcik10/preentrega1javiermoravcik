@@ -5,3 +5,17 @@
     justify-content: space-evenly;
     margin-top: 50px; 
 }
+
+h6 {
+    color: red;
+    margin-top: 300px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+.loader {
+    color: red;
+    margin-top: 300px;
+    margin-left: 600px;
+    font-size: 40px;
+}

@@ -20,6 +20,8 @@
     margin-top: 150px;
     display: flex;
     text-align: start;
+    background: linear-gradient(#3b3939, #000000);
+    
 }
 
 .card1:hover {
@@ -39,7 +41,7 @@
     padding: 12px 8px;
     margin-left: 50px;
     width: 500px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .h3Detail1 {
@@ -92,7 +94,7 @@
     transform: scale(1.1);
     border-bottom: none;
     font-weight: bold;
-    color: rgb(56, 129, 27);;
+    color: rgb(255, 255, 255);;
     font-size: 20px;
 }
 
@@ -101,6 +103,12 @@
 }
 
 .mybuttonDetail:hover {
-    background-color: #444444;
-    
+    background-color: #444444;   
+}
+
+.nextPreview {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    word-spacing: 250px;
 }

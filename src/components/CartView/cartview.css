@@ -1,0 +1,57 @@
+.viewContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 130px;
+}
+
+.cartView {
+    color: #ffffff;
+    width: 780px;
+    height: 250px;
+    border-radius: 4px;
+    background: linear-gradient(#3b3939, #131313);
+    transition: all 0.20s ease-in;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 20px;
+    display: flex;
+}
+
+.cartView:hover {
+    border: 1px solid rgb(133, 133, 133);
+}
+
+.card-img2 {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    margin-left: -40px;
+}
+
+.card-img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: 20px;
+}
+
+.titleCartView {
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+hr {
+    width: 500px;
+    margin-left: -35px;
+    margin-top: -25px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+
+}

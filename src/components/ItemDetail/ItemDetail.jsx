@@ -1,9 +1,26 @@
 import "./ItemDetail.css"
 import ToggleButton from "../ToggleButton/ToggleButton";
-
+import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { cartContext } from "../../context/cartContext";
+ 
+import React, {} from "react";
+import { useState } from "react";
+import MyButton from "../MyButton/MyButton";
 
 
 function ItemDetail( {product} ) {
+
+    const { addToCart } = useContext(cartContext)
+    // (revisar el React.useState(false) y el import react useState)
+    let [addedToCart, setAddedToCart] = React.useState(false);
+    const [isInCart, setIsInCart]  = useState(false)
+
+    function onAddToCart(count) {
+        setIsInCart(count);
+        addToCart(product,count)
+    }
 
     return (
         <div className="item-list-detail">
@@ -15,14 +32,34 @@ function ItemDetail( {product} ) {
             <div className="card-detail1">
                 <h3 className="h3Detail1">{product.title}</h3>
                 <p className="descriptionDetail">{product.description}</p>
-                <p className="priceDetail">${product.price} <strong className="priceStrongDetail" >NUEVO</strong> </p>
+                <p className="priceDetail">${product.price} <strong className="priceStrongDetail" >NUEVO</strong><strong className="priceStrongDetail" >ENVIO GRATIS 🚛</strong> </p>
                 <p className="descuentoDetail" >{product.descuento}</p>
                 <div className="stockCounter" >
             <p className="disponibleDetail">{product.disponible}</p> 
-            {product.itemcounter}
+            { isInCart ? (
+                <Link to="/cart">
+                <MyButton>Ir al Carrito</MyButton>
+                </Link>
+                 ) : (
+                <ItemCount onAddToCart={onAddToCart} stock={product.stock} />
+            )}
+            {/* {
+                addedToCart === false ? (
+            <ItemCount onAddToCart={onAddToCart} stock={product.stock} />
+             ) : (
+                <div>
+                    <small>Agregaste {addedToCart} productos al carrito</small>
+            <a href="/cart">Ir a ver el carrito</a>
+            </div>
+            )} */}
             </div>
             <div className="mybuttonDetail" >
             {product.mybutton}
+            </div>
+            <div className="nextPreview">
+            <Link to={`/detail/${product.id - 1}`} >{"<<"}Anterior</Link>
+            <span>  </span>
+            <Link to={`/detail/${product.id + 1}`} >Siguiente{">>"}</Link>
             </div>
             </div>
         </div>

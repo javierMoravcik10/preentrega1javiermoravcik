@@ -1,19 +1,19 @@
 import "./mybutton.css";
-import React, { useState, useEffect} from "react";
+import React, { useState } from "react";
 
 function MyButton(props) {
-    let [colorBtn, setColorBtn] = useState(props.color);
+    let [colorBtn, setColorBtn] = useState(props.colorBtn);
 
-    useEffect(() => {
-    }, []);
+    // useEffect(() => {
+    // }, []);
 
-    function handleClick() {
-        setColorBtn("grey");
-    }
+    // function handleClick() {
+    //     setColorBtn("grey");
+    // }
 
     return (
         <button
-            onClick={handleClick}
+            onClick={props.onTouchButton}
             style={{ backgroundColor: colorBtn, marginBottom: "10px" }}
             className="btn"
           >

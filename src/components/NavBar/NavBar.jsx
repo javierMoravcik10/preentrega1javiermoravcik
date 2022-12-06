@@ -25,11 +25,14 @@ function NavBar(){
                 <li>
                     <Link to="/category/Buzos">Buzos</Link>
                 </li>
+                {/* <li>
+                    <Link to="/detail/id">Detalles</Link>
+                </li> */}
                 <li>
-                    <Link to="/detail">Detalles</Link>
-                </li>
-                <li>
-                    <a href="/"><CartWidget counter="0"/></a>
+                    <Link to="/cart">
+                        <CartWidget/>
+                    </Link>
+                    {/* <a href="/cart"><CartWidget counter="0"/></a> */}
                 </li>
             <ToggleButton icon="💰"/>
             </ul>
