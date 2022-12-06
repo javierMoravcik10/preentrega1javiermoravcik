@@ -5,7 +5,6 @@ export const cartContext = createContext();
 
 //2. Creamos nuestro Context provider
 export function CartContextProvider({children}){
-    const saludoContext = "Hola Context!";
 
     const [cart, setCart] = useState([]);
 
@@ -80,7 +79,7 @@ export function CartContextProvider({children}){
     // 3. Retornamos el provider del context creado
     // 4. Pasamos en a prop "value" las variables que queramos hacer visibles.
     return(
-        <cartContext.Provider value={{ cart, addToCart, saludoContext, itemsInCart, removeItem, priceInCart }} >
+        <cartContext.Provider value={{ cart, addToCart, itemsInCart, removeItem, priceInCart }} >
         {children}
         </cartContext.Provider>
     );

@@ -28,10 +28,11 @@ function CartView() {
             buyer: {
                 name: "Javier",
                 email: "javierm.6519@gmail.com",
-                phone: "453453"
+                phone: "453453",
+                direccion: "Av. Siemprevivas 348"
             },
             items: cart,
-            total: priceInCart(),
+            total: 0,
             date: new Date(),
         };
     

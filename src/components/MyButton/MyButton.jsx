@@ -2,7 +2,7 @@ import "./mybutton.css";
 import React, { useState } from "react";
 
 function MyButton(props) {
-    let [colorBtn, setColorBtn] = useState(props.colorBtn);
+    let [colorBtn] = useState(props.colorBtn);
 
     // useEffect(() => {
     // }, []);
