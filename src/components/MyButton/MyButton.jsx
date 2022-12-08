@@ -12,7 +12,7 @@ function MyButton(props) {
     // }
 
     return (
-        <button
+        <button 
             onClick={props.onTouchButton}
             style={{ backgroundColor: colorBtn, marginBottom: "10px" }}
             className="btn"

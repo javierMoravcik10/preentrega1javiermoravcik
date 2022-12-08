@@ -1,24 +1,25 @@
 import "./App.css";
 import ItemListContainer from "./components/ItemList/ItemListContainer.jsx";
 import NavBar from "./components/NavBar/NavBar";
-import React, { useEffect } from "react";
+import React from "react";
 import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartContextProvider } from "./context/cartContext";
 import CartView from "./components/CartView/CartView";
 import ThankYou from "./components/ThankYou/ThankYou";
-import {DB, products} from "./Services/firestore";
-import {addDoc} from "firebase/firestore";
+// import { useEffect } from "react";
+// import {DB, products} from "./Services/firestore";
+// import {addDoc, collection} from "firebase/firestore";
 
 // import { getItems } from "./Services/firestore";
 
  function App() {
   // getItems();
-  useEffect(() => {
-    const productosCollection = collection(DB, "products")
-    products.map((item)=> addDoc(productosCollection, item))
-  },[])
+  // useEffect(() => {
+    //  const productosCollection = collection(DB, "products")
+    //  products.map((item)=> addDoc(productosCollection, item))
+  // },[])
 
   return (
     <CartContextProvider>

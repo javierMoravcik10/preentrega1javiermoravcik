@@ -1,5 +1,37 @@
 .thankYou {
-    margin-top: 130px;
+    margin-top: 200px;
     color: white;
     text-align: center;
+    background: linear-gradient(#3c8a31, #083304);  
+    width: 500px;
+    height: 150px; 
+    margin-left: 450px;
+}
+
+.thankYou:hover {
+    border-radius: 6px;
+    letter-spacing: 1px;
+    box-shadow: 5px 1px 20px 1px rgb(102, 167, 76);
+    transform: translateY(-15px);
+    transition: all 0.20s;
+}
+
+.youA {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(30, 16, 156);
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 3px;
+    letter-spacing: none;
+    padding: 5px;
+    
+}
+
+.youA:hover {
+  font-size: 17px;
+  background-color: rgb(64, 52, 175);
+  text-decoration: underline;
 }

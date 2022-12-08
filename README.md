@@ -1,10 +1,27 @@
-# Getting Started with Create React App
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run: -->
+
+# Proyecto Guatambú.
+
+## Informacion sobre Guatambú React.
+El proyecto se trata sobre un sitio web dedicado a la venta de productos de indumentaria.
+
+### Detalles en componentes:
+A.- Encontramos una lista de productos en general, detallando breve informacion.
+B.- Especificaciones detalladas por cada producto, pudiendo agregar items al carrito de compras.
+C.- Pasamos a un carrito de compras donde podemos gestionar los mismos.
+D.- En este paso podemos completar un formulario de contacto/compras para enviar informacion al cliente.
+
+## El proyecto cuenta con:
+React JS, Firestore, Database. 
+
+# Creador del proyecto:
+Javier Moravcik.
 
 ### `npm start`
 

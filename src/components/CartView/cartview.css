@@ -8,6 +8,8 @@
 
 .cartView {
     color: #ffffff;
+
+    
     width: 780px;
     height: 250px;
     border-radius: 4px;
@@ -20,7 +22,7 @@
     display: flex;
 }
 
-.cartView:hover {
+.cartView:hover, .totalPrice:hover {
     border: 1px solid rgb(133, 133, 133);
 }
 
@@ -30,6 +32,7 @@
     object-fit: cover;
     margin-left: -40px;
 }
+
 
 .card-img2 img {
     width: 100%;
@@ -54,4 +57,70 @@ hr {
     display: flex;
     justify-content: space-between;
 
+}
+
+.totalPrice {
+        color: #ffffff;
+        width: 780px;
+        height: 230px;
+        border-radius: 4px;
+        background: linear-gradient(#494848, #131313);
+        transition: all 0.20s ease-in;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 20px;
+        font-weight: bold;
+        font-size: 20px;
+}
+
+.cartNoProducts {
+    background: linear-gradient(#e01111, #2e0000);
+    text-align: center;
+    height: 250px; 
+    width: 700px;
+    margin-left: 350px; 
+    border-radius: 6px;
+}
+
+.cartNoProducts:hover {
+        box-shadow: 5px 1px 20px 1px rgb(255, 255, 255);
+        transition: all 0.20s;
+    }
+
+.TotalAPagar:hover {
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+/*  CLASES DEL CARTFORM     */
+
+.myButton {
+    margin-left: 350px;
+    margin-top: -95px;
+}
+
+.clearCart {
+    margin-left: 600px;
+}
+
+.divForm {
+    display: flex;
+    margin-bottom: 8px;
+    margin-left: 80px;
+}
+
+.labelForm {
+    width: 100px;
+    margin-right: 4;
+}
+
+.buttonFinalizarCompra {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
 }

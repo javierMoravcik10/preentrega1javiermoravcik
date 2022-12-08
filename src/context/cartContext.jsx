@@ -47,7 +47,7 @@ export function CartContextProvider({children}){
         let totalPrice = 0;
         cart.forEach(
             ( producto ) => 
-            (totalPrice = totalPrice + producto.price * producto.cantidad)
+            (totalPrice = totalPrice + producto.price * producto.count)
             );
         return totalPrice;
     }
@@ -57,20 +57,17 @@ export function CartContextProvider({children}){
     // }
 
     function removeItem(idRemove) {
-        console.log("Eliminando el item", idRemove);
+        console.log("Eliminando el item:", idRemove);
         const newCart = [...cart];
-        newCart.pop();
+       newCart.pop();
         setCart(newCart);
     }
+
+    
 
     // function removeItem(idRemove){
         // cart.filter -> Filtrar todos los items con un ID diferente a "idRemove"
     // }
-
-    //   function  priceInCart() {
-    //     calcular el costo total de la compra
-    //   }
-
 
     // const value = {
     //     saludoContext,
