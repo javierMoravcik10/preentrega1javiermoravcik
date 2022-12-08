@@ -20,20 +20,13 @@ export function CartContextProvider({children}){
             newCart[itemAlreadyInCart].count += count;
             setCart(newCart);
         } else {
-            // let newCart = cart.map( item => item); esto es un COMENTARIO
-            // 1) agregando una propiedad COMENTARIO
+           
             product.count = count;
             newCart.push(product);
-            // 2)usando un spread ESTO ES UN COMENTARIO
-            // newCart.push( ...product, count)  ESTO ES UN COMENTARIO
+           
             setCart(newCart);
         }
 
-                // ESTO ES LO QUE ESTABA BIEN
-        // let newCart = [...cart];
-        // product.count = count;
-        // newCart.push(product)
-        // setCart(newCart)
     }
 
     function itemsInCart(){
@@ -46,35 +39,26 @@ export function CartContextProvider({children}){
         /* Calcular el costo total de la compra */
         let totalPrice = 0;
         cart.forEach(
-            ( producto ) => 
+            ( producto ) =>
             (totalPrice = totalPrice + producto.price * producto.count)
             );
         return totalPrice;
     }
 
-    // function clear(){
-    //     vaciar el estado
+
+
+    // function clear(idRemove){
+    //     const newCart = cart.filter(item => item.id!== idRemove)
+    //     setCart(newCart);
     // }
 
+
+
     function removeItem(idRemove) {
-        console.log("Eliminando el item:", idRemove);
-        const newCart = [...cart];
-       newCart.pop();
+     const newCart = cart.filter(item => item.id!== idRemove)
         setCart(newCart);
     }
 
-    
-
-    // function removeItem(idRemove){
-        // cart.filter -> Filtrar todos los items con un ID diferente a "idRemove"
-    // }
-
-    // const value = {
-    //     saludoContext,
-    //     itemsInCart
-    // };
-    // 3. Retornamos el provider del context creado
-    // 4. Pasamos en a prop "value" las variables que queramos hacer visibles.
     return(
         <cartContext.Provider value={{ cart, addToCart, itemsInCart, removeItem, priceInCart }} >
         {children}

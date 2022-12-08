@@ -15,10 +15,10 @@ El proyecto se trata sobre un sitio web dedicado a la venta de productos de indu
 A.- Encontramos una lista de productos en general, detallando breve informacion.
 B.- Especificaciones detalladas por cada producto, pudiendo agregar items al carrito de compras.
 C.- Pasamos a un carrito de compras donde podemos gestionar los mismos.
-D.- En este paso podemos completar un formulario de contacto/compras para enviar informacion al cliente.
+D.- En este paso podemos completar un formulario de contacto/compras para enviar informacion al cliente y finalizar la compra.
 
 ## El proyecto cuenta con:
-React JS, Firestore, Database. 
+React JS, Firestore, Database, Firebase. Html y css estilos propios. 
 
 # Creador del proyecto:
 Javier Moravcik.

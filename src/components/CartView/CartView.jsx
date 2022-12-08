@@ -11,10 +11,6 @@ import CartForm from "./CartForm";
 function CartView() {
     const { cart, removeItem, priceInCart } = useContext(cartContext);
     let navigate = useNavigate();
-
-    // function handleExport(){
-    //     exportArrayToFirestore();
-    // }
     
     if (cart.length === 0) 
     return (
@@ -25,7 +21,6 @@ function CartView() {
            </a>
     </div>
     );
-        //   clear, priceCart
 
    async function handleCheckout(evt, data){
         const order = {
@@ -42,7 +37,6 @@ function CartView() {
     return (
             <div className="viewContainer">    
             {cart.map((item) => ( 
-                // LE SACAMOS EL RETURN DE ABAJO Y LE PONEMOS LAS () POR LAS {}
                 <div key={item.id} className="cartView">
                     <div className="card-img2">
                     <img src={item.imgurl} alt="" />
@@ -62,7 +56,7 @@ function CartView() {
                     </div>
                     </div>
                     <MyButton onTouchButton={()=>removeItem(item.id)} colorBtn="red">
-                        X
+                    X                        
                     </MyButton>
             </div>
             
@@ -70,11 +64,8 @@ function CartView() {
             ))}
             <div className="totalPrice">
             <p className="TotalAPagar" ><strong>Total a pagar: ${priceInCart()}.</strong></p>
-            {/* <MyButton colorBtn="green" onTouchButton={handleCheckout}>
-                Finalizar Compra
-            </MyButton> */}
+            
             <CartForm onSubmit={handleCheckout}/>
-            {/* <MyButton className="clearCart">Vaciar Carrito</MyButton> */}
             </div>
             <div>
             <MyButton className="clearCart">Vaciar Carrito</MyButton>

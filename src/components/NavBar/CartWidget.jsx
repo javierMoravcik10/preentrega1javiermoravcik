@@ -10,13 +10,12 @@ import { cartContext } from "../../context/cartContext";
 
 function CartWidget({counter}){
     const miContext = useContext(cartContext)
-    // console.log(miContext);
+    const itemCount = miContext.itemsInCart()
 
     return (
         <div className='cart1'>
         <FontAwesomeIcon icon={ faCartPlus } />
-        <sup>{miContext.itemsInCart()}</sup>
-        {/* <sup className="sup">{counter}</sup> */}
+        { itemCount !== 0 && <sup>{itemCount}</sup>  }
 
         </div>
     )
