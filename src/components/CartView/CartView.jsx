@@ -9,7 +9,7 @@ import CartForm from "./CartForm";
 
 
 function CartView() {
-    const { cart, removeItem, priceInCart } = useContext(cartContext);
+    const { cart, removeItem, priceInCart, clearCart } = useContext(cartContext);
     let navigate = useNavigate();
     
     if (cart.length === 0) 
@@ -68,7 +68,7 @@ function CartView() {
             <CartForm onSubmit={handleCheckout}/>
             </div>
             <div>
-            <MyButton className="clearCart">Vaciar Carrito</MyButton>
+            <button  onClick={()=>clearCart()} className="clearCart">Vaciar Carrito</button>
             </div>
             
             

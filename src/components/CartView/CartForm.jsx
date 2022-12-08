@@ -1,8 +1,11 @@
 import { useState } from "react";
 import "./cartview.css" ;
+import  { cartContext } from "../../context/cartContext";
+import React, { useContext } from "react";
 
 
 export default function CartForm(props) {
+    const { clearCart } = useContext(cartContext);
     const [data, setData] = useState ({
         name: "",
         email: "",
@@ -54,7 +57,7 @@ return (
             {/* <MyButton disabled={data.name === "" || data.phone === "" || data.email === "" || data.addres === ""} colorBtn="green" onTouchButton={(evt)=>props.onSubmit(evt, data)}>
                 Finalizar Compra
             </MyButton>  */}
-            <button className="buttonFinalizarCompra" type="submit" disabled={data.name === "" || data.phone === "" || data.email === "" || data.addres === ""}>
+            <button  className="buttonFinalizarCompra" type="submit" disabled={data.name === "" || data.phone === "" || data.email === "" || data.addres === ""} onClick={()=>clearCart()} >
              Finalizar compra
             </button>
             </div> 

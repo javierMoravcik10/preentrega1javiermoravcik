@@ -47,10 +47,9 @@ export function CartContextProvider({children}){
 
 
 
-    // function clear(idRemove){
-    //     const newCart = cart.filter(item => item.id!== idRemove)
-    //     setCart(newCart);
-    // }
+    function clearCart(){
+        setCart([]);
+    }
 
 
 
@@ -60,7 +59,7 @@ export function CartContextProvider({children}){
     }
 
     return(
-        <cartContext.Provider value={{ cart, addToCart, itemsInCart, removeItem, priceInCart }} >
+        <cartContext.Provider value={{ cart, addToCart, itemsInCart, removeItem, priceInCart, clearCart }} >
         {children}
         </cartContext.Provider>
     );

@@ -1,7 +1,6 @@
 import React from "react";
 import "./thankYou.css"
 import { useParams } from "react-router-dom";
-// import { Link } from "react-router-dom";
 
  
 function ThankYou(){
