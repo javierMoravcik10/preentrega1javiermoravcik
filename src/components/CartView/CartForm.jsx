@@ -1,11 +1,8 @@
 import { useState } from "react";
 import "./cartview.css" ;
-import  { cartContext } from "../../context/cartContext";
-import React, { useContext } from "react";
-
 
 export default function CartForm(props) {
-    const { clearCart } = useContext(cartContext);
+
     const [data, setData] = useState ({
         name: "",
         email: "",
@@ -14,6 +11,7 @@ export default function CartForm(props) {
     });
 
     function onInputChange (evt) {
+
         let nameInput = evt.target.name;
         let value = evt.target.value;
 
@@ -24,10 +22,8 @@ export default function CartForm(props) {
 
     function onSubmit(evt) {
 
-
         evt.preventDefault();
-        props.onSubmit(evt, data);
-        // console.log(`Tu nombre es: ${data.name}, your email: ${data.email} and your phone ${data.phone} years`);
+        props.onSubmit(data);
     }
 
 return (
@@ -52,12 +48,9 @@ return (
                 <input required value={data.addres} name="addres" type="addres" onChange={onInputChange} />
             </div>
 
-            {/* <button type="submit">Crear orden/Compra</button> */}
             <div className="myButton">
-            {/* <MyButton disabled={data.name === "" || data.phone === "" || data.email === "" || data.addres === ""} colorBtn="green" onTouchButton={(evt)=>props.onSubmit(evt, data)}>
-                Finalizar Compra
-            </MyButton>  */}
-            <button  className="buttonFinalizarCompra" type="submit" disabled={data.name === "" || data.phone === "" || data.email === "" || data.addres === ""} onClick={()=>clearCart()} >
+          
+            <button  className="buttonFinalizarCompra" type="submit" disabled={data.name === "" || data.phone === "" || data.email === "" || data.addres === ""}>
              Finalizar compra
             </button>
             </div> 

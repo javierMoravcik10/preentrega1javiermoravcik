@@ -17,7 +17,7 @@ function ItemCount ({ stock, onAddToCart }) {
         <div>
             <MyButton  onTouchButton={handleResta}>{"<"}</MyButton>
             <span> {count} </span>
-            <MyButton onTouchButton={handleSuma} >{">"}</MyButton> - <button className="buttonAdd" onClick={() => onAddToCart(count)} >Agregar 🛒 </button>
+            <MyButton onTouchButton={handleSuma} >{">"}</MyButton> - <button disabled={ stock <= 0 } className="buttonAdd" onClick={() => onAddToCart(count)} >Agregar 🛒 </button>
         </div>
     );
 }

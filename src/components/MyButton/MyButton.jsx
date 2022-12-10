@@ -4,13 +4,6 @@ import React, { useState } from "react";
 function MyButton(props) {
     let [colorBtn] = useState(props.colorBtn);
 
-    // useEffect(() => {
-    // }, []);
-
-    // function handleClick() {
-    //     setColorBtn("grey");
-    // }
-
     return (
         <button 
             onClick={props.onTouchButton}

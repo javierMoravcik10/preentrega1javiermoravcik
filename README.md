@@ -1,21 +1,15 @@
-<!-- # Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run: -->
-
 # Proyecto Guatambú.
 
 ## Informacion sobre Guatambú React.
-El proyecto se trata sobre un sitio web dedicado a la venta de productos de indumentaria.
+El proyecto se trata sobre una app e-commerce, dedicado a la venta de productos de indumentaria.
 
 ### Detalles en componentes:
 A.- Encontramos una lista de productos en general, detallando breve informacion.
 B.- Especificaciones detalladas por cada producto, pudiendo agregar items al carrito de compras.
 C.- Pasamos a un carrito de compras donde podemos gestionar los mismos.
 D.- En este paso podemos completar un formulario de contacto/compras para enviar informacion al cliente y finalizar la compra.
+
+E.- En el sitio se puede navegar entre las distintas secciones e ir visualizando el producto o el estado del carrito.
 
 ## El proyecto cuenta con:
 React JS, Firestore, Database, Firebase. Html y css estilos propios. 

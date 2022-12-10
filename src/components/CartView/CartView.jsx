@@ -22,7 +22,7 @@ function CartView() {
     </div>
     );
 
-   async function handleCheckout(evt, data){
+   async function handleCheckout(data){
         const order = {
             buyer: data,
             items: cart,
@@ -32,6 +32,7 @@ function CartView() {
     
     const orderId = await createOrder(order);
     navigate(`/thankyou/${orderId}`);
+    clearCart();
     }
 
     return (
@@ -66,12 +67,8 @@ function CartView() {
             <p className="TotalAPagar" ><strong>Total a pagar: ${priceInCart()}.</strong></p>
             
             <CartForm onSubmit={handleCheckout}/>
-            </div>
-            <div>
             <button  onClick={()=>clearCart()} className="clearCart">Vaciar Carrito</button>
             </div>
-            
-            
                 </div>
     );
 }

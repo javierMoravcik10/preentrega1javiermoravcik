@@ -5,7 +5,6 @@ import "./item.css";
 
 import { Link } from "react-router-dom";
 
-
 function Item ({ title, imgurl, price, color, description, id, discount, stock }) {
 
     const urlDetail = `/detail/${id}`;
@@ -27,8 +26,7 @@ function Item ({ title, imgurl, price, color, description, id, discount, stock }
             <Link to={urlDetail}>
                 <MyButton 
                    onTouchButton={() => console.log("click")} 
-                    colorBtn={stock <= 0 && "#444444"}
-                    >
+                    colorBtn={stock <= 0 && "#444444"}>
                         Ver Producto
                     </MyButton>
             </Link>

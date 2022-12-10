@@ -12,15 +12,16 @@ import MyButton from "../MyButton/MyButton";
 
 function ItemDetail( {product} ) {
 
-    const { addToCart } = useContext(cartContext)
-    // (revisar el React.useState(false) y el import react useState)
-    let [addedToCart, setAddedToCart] = React.useState(false);
+    const { addToCart, cart } = useContext(cartContext)
     const [isInCart, setIsInCart]  = useState(false)
 
     function onAddToCart(count) {
         setIsInCart(count);
         addToCart(product,count)
     }
+
+    let itemInContext = cart.find (itemInCart => itemInCart.id === product.id )
+    let stockUpdated = itemInContext !== undefined ? product.stock - itemInContext.count : product.stock;
 
     return (
         <div className="item-list-detail">
@@ -41,17 +42,9 @@ function ItemDetail( {product} ) {
                 <MyButton>Ir al Carrito</MyButton>
                 </Link>
                  ) : (
-                <ItemCount onAddToCart={onAddToCart} stock={product.stock} />
+                <ItemCount onAddToCart={onAddToCart} stock={stockUpdated} />
             )}
-            {/* {
-                addedToCart === false ? (
-            <ItemCount onAddToCart={onAddToCart} stock={product.stock} />
-             ) : (
-                <div>
-                    <small>Agregaste {addedToCart} productos al carrito</small>
-            <a href="/cart">Ir a ver el carrito</a>
-            </div>
-            )} */}
+           
             </div>
             <div className="mybuttonDetail" >
             {product.mybutton}

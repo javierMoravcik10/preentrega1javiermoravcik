@@ -5,7 +5,6 @@ import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import Loader from "../Loaders/Loader";
 
-
 function ItemDetailContainer() {
    
   const [product, setProduct] = useState([]);
@@ -18,9 +17,6 @@ function ItemDetailContainer() {
             setIsLoading(false);
     })
 }
-    //     let respuesta = await getSingleItem(id);
-    //     setProduct(respuesta);
-    // }
 
     useEffect(() =>  {
         getItemsAsync();
@@ -32,12 +28,6 @@ if(isLoading)
     return (
         <ItemDetail product={product} />
     )
-
-    // return (
-    //     <div>
-    //         <ItemDetail product={product}/>
-    //      </div>
-    // );
 }
 
 export default ItemDetailContainer;

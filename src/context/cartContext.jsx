@@ -1,8 +1,6 @@
 import { createContext, useState } from "react";
-
 // 1. Importamos e inicializamos el contexto con createContext()
 export const cartContext = createContext();
-
 //2. Creamos nuestro Context provider
 export function CartContextProvider({children}){
 
@@ -45,13 +43,9 @@ export function CartContextProvider({children}){
         return totalPrice;
     }
 
-
-
     function clearCart(){
         setCart([]);
     }
-
-
 
     function removeItem(idRemove) {
      const newCart = cart.filter(item => item.id!== idRemove)

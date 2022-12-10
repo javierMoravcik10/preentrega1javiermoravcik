@@ -1,5 +1,4 @@
 import React from "react";
-
 import { DotSpinner } from"@uiball/loaders";
 
 function Loader() {
@@ -9,7 +8,6 @@ function Loader() {
  speed={1.5} 
  color="orange" 
 />
- 
 }
 
 export default Loader;

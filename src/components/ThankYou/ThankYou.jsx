@@ -11,7 +11,7 @@ function ThankYou(){
         <>
         <div className="thankYou">
             <h1>¡Gracias por su compra!</h1>
-            <p>El ID de su compra es: <strong>{idOrder}.</strong></p>
+            <p>El codigo de su compra es: <strong>{idOrder}.</strong></p>
             <a className="youA" href="http://localhost:3000/">
         Volver al menú
            </a>

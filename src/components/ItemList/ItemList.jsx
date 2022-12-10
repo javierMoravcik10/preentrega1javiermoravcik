@@ -1,24 +1,8 @@
-// import { useState, useEffect } from "react";
 import "./itemlist.css";
 import Item from "./Item";
 import React from "react";
-// import getItems from "../../Services/mockService";
-
-// import { useParams } from "react-router-dom";
 
 function ItemList({ products }) {
-   
-    // const [products, setProducts] = useState([]);
-    // const { idCategory } = useParams();
-
-    // async function getItemsAsync() {
-    //   let respuesta = await getItems(idCategory);
-    //   setProducts(respuesta);
-    // }
-
-    // useEffect(() => {
-    //   getItemsAsync();
-    // }, [idCategory]);
 
     return (
         <div className="item-list">

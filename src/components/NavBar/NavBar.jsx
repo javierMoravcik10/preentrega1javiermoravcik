@@ -1,5 +1,5 @@
 import React from "react";
-import ToggleButton from "../ToggleButton/ToggleButton";
+// import ToggleButton from "../ToggleButton/ToggleButton";
 import CartWidget from "./CartWidget";
 import LogoNav from "./LogoNav";
 import "./NavBarStyle.css";
@@ -25,16 +25,12 @@ function NavBar(){
                 <li>
                     <Link to="/category/Buzos">Buzos</Link>
                 </li>
-                {/* <li>
-                    <Link to="/detail/id">Detalles</Link>
-                </li> */}
                 <li>
                     <Link to="/cart">
                         <CartWidget/>
                     </Link>
-                    {/* <a href="/cart"><CartWidget counter="0"/></a> */}
                 </li>
-            <ToggleButton icon="💰"/>
+            {/* <ToggleButton icon="💰"/> */}
             </ul>
         </nav>
         </div>
